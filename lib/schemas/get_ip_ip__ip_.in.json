@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "ip": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "callback": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "exclude": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "format": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

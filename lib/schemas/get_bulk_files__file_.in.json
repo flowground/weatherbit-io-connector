@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "file": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

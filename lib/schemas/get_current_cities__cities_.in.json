@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "cities": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "units": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "S",
+                "I"
+            ]
+        },
+        "marine": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "t"
+            ]
+        },
+        "lang": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "ar",
+                "az",
+                "be",
+                "bg",
+                "bs",
+                "ca",
+                "cs",
+                "de",
+                "fi",
+                "fr",
+                "el",
+                "es",
+                "et",
+                "hr",
+                "hu",
+                "id",
+                "it",
+                "is",
+                "kw",
+                "nb",
+                "nl",
+                "pl",
+                "pt",
+                "ro",
+                "ru",
+                "sk",
+                "sl",
+                "sr",
+                "sv",
+                "tr",
+                "uk",
+                "zh",
+                "zh-tw"
+            ]
+        },
+        "callback": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

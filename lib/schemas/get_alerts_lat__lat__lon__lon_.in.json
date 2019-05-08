@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "lat": {
+            "required": true,
+            "type": "number",
+            "format": "double"
+        },
+        "lon": {
+            "required": true,
+            "type": "number",
+            "format": "double"
+        },
+        "callback": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

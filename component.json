@@ -1,0 +1,936 @@
+{
+    "title": "Weatherbit.io - Swagger UI Weather API documentation",
+    "description": "This is the documentation for the Weatherbit Weather API.  The base URL for the API is [http://api.weatherbit.io/v2.0/](http://api.weatherbit.io/v2.0/) or [https://api.weatherbit.io/v2.0/](http://api.weatherbit.io/v2.0/). Below is the Swagger UI documentation for the API. All API requests require the `key` parameter.        An Example for a 5 day forecast for London, UK would be `http://api.weatherbit.io/v2.0/forecast/3hourly?city=London`&`country=UK`. See our [Weather API description page](https://www.weatherbit.io/api) for additional documentation.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/weatherbit.io/2.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.weatherbit.io/v2.0",
+                    "http://api.weatherbit.io/v2.0",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_alerts_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_alerts_lat__lat__lon__lon_.js",
+            "title": "Returns severe weather alerts issued by meteorological agencies - Given a lat/lon.",
+            "description": "Returns severe weather alerts issued by meteorological agencies - given a lat, and a lon.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_alerts_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_files__file_": {
+            "main": "./lib/actions/get_bulk_files__file_.js",
+            "title": "Download pre-generated bulk datasets",
+            "description": "**(Advanceed/Enterprise plans only)** Downloads bulk data files - OPTIONS: ( current.json.gz - Current observations for cities > 1000 population). Units are Metric (Celcius, m/s, etc).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_files__file_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_daily_city__city__country__country_": {
+            "main": "./lib/actions/get_bulk_history_daily_city__city__country__country_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given City and/or State, Country.",
+            "description": "Returns Historical Observations - Given a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_daily_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_daily_city_id__city_id_": {
+            "main": "./lib/actions/get_bulk_history_daily_city_id__city_id_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a City ID",
+            "description": "Returns Historical Observations - Given a City ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_daily_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_daily_ip__ip_": {
+            "main": "./lib/actions/get_bulk_history_daily_ip__ip_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given IP Address, or auto.",
+            "description": "Returns Historical Observations - Given IP Address, or auto.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_daily_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_daily_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_bulk_history_daily_lat__lat__lon__lon_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a lat/lon.",
+            "description": "Returns Historical Observations - Given a lat, and lon.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_daily_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_daily_postal_code__postal_code_": {
+            "main": "./lib/actions/get_bulk_history_daily_postal_code__postal_code_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a Postal Code",
+            "description": "Returns Historical Observations - Given a Postal Code.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_daily_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_daily_station__station_": {
+            "main": "./lib/actions/get_bulk_history_daily_station__station_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a station ID.",
+            "description": "Returns Historical Observations - Given a station ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_daily_station__station_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_hourly_city__city__country__country_": {
+            "main": "./lib/actions/get_bulk_history_hourly_city__city__country__country_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given City and/or State, Country. (1 Year/call limit)",
+            "description": "Returns Historical Observations - Given a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_hourly_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_hourly_city_id__city_id_": {
+            "main": "./lib/actions/get_bulk_history_hourly_city_id__city_id_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a City ID. (1 Year/call limit)",
+            "description": "Returns Historical Observations - Given a City ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_hourly_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_hourly_ip__ip_": {
+            "main": "./lib/actions/get_bulk_history_hourly_ip__ip_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given IP Address, or auto. (1 Year/call limit)",
+            "description": "Returns Historical Observations - Given IP Address, or auto.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_hourly_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_hourly_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_bulk_history_hourly_lat__lat__lon__lon_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a lat/lon. (1 Year/call limit)",
+            "description": "Returns Historical Observations - Given a lat, and lon.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_hourly_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_hourly_postal_code__postal_code_": {
+            "main": "./lib/actions/get_bulk_history_hourly_postal_code__postal_code_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a Postal Code. (1 Year/call limit)",
+            "description": "Returns Historical Observations - Given a Postal Code. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_hourly_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_bulk_history_hourly_station__station_": {
+            "main": "./lib/actions/get_bulk_history_hourly_station__station_.js",
+            "title": "[Enterprise Plan Only] Returns Historical Observations - Given a station ID. (1 Year/call limit)",
+            "description": "Returns Historical Observations - Given a station ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_bulk_history_hourly_station__station_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_cities__cities_": {
+            "main": "./lib/actions/get_current_cities__cities_.js",
+            "title": "Returns a group of observations given a list of cities",
+            "description": "Returns a group of Current Observations - Given a list of City IDs. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_cities__cities_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_city__city__country__country_": {
+            "main": "./lib/actions/get_current_city__city__country__country_.js",
+            "title": "Returns a Current Observation - Given City and/or State, Country.",
+            "description": "Returns a Current Observation - Given a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_city_id__city_id_": {
+            "main": "./lib/actions/get_current_city_id__city_id_.js",
+            "title": "Returns a current observation by city id.",
+            "description": "Returns current weather observation - Given a City ID. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_ip__ip_": {
+            "main": "./lib/actions/get_current_ip__ip_.js",
+            "title": "Returns a Current Observation - Given an IP address, or auto.",
+            "description": "Returns a Current Observation - Given an IP address, or auto.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_current_lat__lat__lon__lon_.js",
+            "title": "Returns a Current Observation - Given a lat/lon.",
+            "description": "Returns a Current Observation - given a lat, and a lon.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_postal_code__postal_code_": {
+            "main": "./lib/actions/get_current_postal_code__postal_code_.js",
+            "title": "Returns a current observation by postal code.",
+            "description": "Returns current weather observation - Given a Postal Code. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_station__station_": {
+            "main": "./lib/actions/get_current_station__station_.js",
+            "title": "Returns a Current Observation. - Given a station ID.",
+            "description": "Returns a Current Observation - Given a station ID.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_station__station_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_current_stations__stations_": {
+            "main": "./lib/actions/get_current_stations__stations_.js",
+            "title": "Returns a group of observations given a list of stations",
+            "description": "Returns a group of Current Observations - Given a list of Station Call IDs. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_current_stations__stations_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_3hourly_city__city__country__country_": {
+            "main": "./lib/actions/get_forecast_3hourly_city__city__country__country_.js",
+            "title": "Returns a 3-hourly forecast - Given City and/or State, Country.",
+            "description": "Returns a 3-hourly forecast, where each point represents a three hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_3hourly_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_3hourly_city_id__city_id_": {
+            "main": "./lib/actions/get_forecast_3hourly_city_id__city_id_.js",
+            "title": "Returns a 3-hourly forecast - Given a City ID.",
+            "description": "Returns a 3-hourly forecast, where each point represents a three hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_3hourly_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_3hourly_ip__ip_": {
+            "main": "./lib/actions/get_forecast_3hourly_ip__ip_.js",
+            "title": "Returns a 3hourly forecast - Given an IP Address, or ip=auto for automatic IP lookup.",
+            "description": "Returns a 3-hourly forecast, where each point represents a three hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_3hourly_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_3hourly_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_forecast_3hourly_lat__lat__lon__lon_.js",
+            "title": "Returns a 3-hourly forecast - Given a lat/lon.",
+            "description": "Returns a 3-hourly forecast, where each point represents a three hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_3hourly_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_3hourly_postal_code__postal_code_": {
+            "main": "./lib/actions/get_forecast_3hourly_postal_code__postal_code_.js",
+            "title": "Returns a 3-hourly forecast - Given a Postal Code.",
+            "description": "Returns a 3-hourly forecast, where each point represents a three hour period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_3hourly_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_daily_city__city__country__country_": {
+            "main": "./lib/actions/get_forecast_daily_city__city__country__country_.js",
+            "title": "Returns a daily forecast - Given City and/or State, Country.",
+            "description": "Returns a daily forecast, where each point represents one day (24hr) period. Every point has a datetime string in the format \"YYYY-MM-DD\". One day begins at 00:00 UTC, and ends at 23:59 UTC. Accepts a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_daily_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_daily_city_id__city_id_": {
+            "main": "./lib/actions/get_forecast_daily_city_id__city_id_.js",
+            "title": "Returns a daily forecast - Given a City ID.",
+            "description": "Returns a daily forecast, where each point represents one day (24hr) period. Every point has a datetime string in the format \"YYYY-MM-DD\". One day begins at 00:00 UTC, and ends at 23:59 UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_daily_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_daily_ip__ip_": {
+            "main": "./lib/actions/get_forecast_daily_ip__ip_.js",
+            "title": "Returns a daily forecast - Given an IP Address, or ip=auto for automatic IP lookup.",
+            "description": "Returns a daily forecast, where each point represents one day (24hr) period. Every point has a datetime string in the format \"YYYY-MM-DD\". One day begins at 00:00 UTC, and ends at 23:59 UTC. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_daily_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_daily_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_forecast_daily_lat__lat__lon__lon_.js",
+            "title": "Returns a daily forecast - Given Lat/Lon.",
+            "description": "Returns a daily forecast, where each point represents one day (24hr) period. Every point has a datetime string in the format \"YYYY-MM-DD\". One day begins at 00:00 UTC, and ends at 23:59 UTC. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_daily_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_daily_postal_code__postal_code_": {
+            "main": "./lib/actions/get_forecast_daily_postal_code__postal_code_.js",
+            "title": "Returns a daily forecast - Given a Postal Code.",
+            "description": "Returns a daily forecast, where each point represents one day (24hr) period. Every point has a datetime string in the format \"YYYY-MM-DD\". One day begins at 00:00 UTC, and ends at 23:59 UTC.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_daily_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_energy_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_forecast_energy_lat__lat__lon__lon_.js",
+            "title": "Returns Energy Forecast API response  - Given a single lat/lon. ",
+            "description": "Retrieve an 8 day forecast relevant to te Energy Sector (degree days, solar radiation, precipitation, wind).",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_energy_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_hourly_city__city__country__country_": {
+            "main": "./lib/actions/get_forecast_hourly_city__city__country__country_.js",
+            "title": "Returns an 48 hour (hourly forecast) - Given City and/or State, Country.",
+            "description": " Returns an hourly forecast, where each point represents a one hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC. Accepts a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate.\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_hourly_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_hourly_city_id__city_id_": {
+            "main": "./lib/actions/get_forecast_hourly_city_id__city_id_.js",
+            "title": "Returns a 48 hour (hourly) forecast - Given a City ID.",
+            "description": " Returns an hourly forecast, where each point represents a one hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_hourly_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_hourly_ip__ip_": {
+            "main": "./lib/actions/get_forecast_hourly_ip__ip_.js",
+            "title": "Returns a hourly forecast - Given an IP Address, or ip=auto for automatic IP lookup.",
+            "description": " Returns an hourly forecast, where each point represents a one hour period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_hourly_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_hourly_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_forecast_hourly_lat__lat__lon__lon_.js",
+            "title": "Returns 48 hour (hourly) forecast - Given a lat/lon.",
+            "description": "Returns an hourly forecast, where each point represents a one hour period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_hourly_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_forecast_hourly_postal_code__postal_code_": {
+            "main": "./lib/actions/get_forecast_hourly_postal_code__postal_code_.js",
+            "title": "Returns a 48 hour (hourly) forecast - Given a Postal Code.",
+            "description": " Returns an hourly forecast, where each point represents a one hour   period. Every point has a datetime string in the format \"YYYY-MM-DD:HH\". Time is UTC. \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_forecast_hourly_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_daily_city__city__country__country_": {
+            "main": "./lib/actions/get_history_daily_city__city__country__country_.js",
+            "title": "Returns Historical Observations - Given City and/or State, Country.",
+            "description": "Returns Historical Observations - Given a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_daily_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_daily_city_id__city_id_": {
+            "main": "./lib/actions/get_history_daily_city_id__city_id_.js",
+            "title": "Returns Historical Observations - Given a City ID",
+            "description": "Returns Historical Observations - Given a City ID. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_daily_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_daily_ip__ip_": {
+            "main": "./lib/actions/get_history_daily_ip__ip_.js",
+            "title": "Returns Historical Observations - Given IP Address, or auto.",
+            "description": "Returns Historical Observations - Given IP Address, or auto. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_daily_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_daily_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_history_daily_lat__lat__lon__lon_.js",
+            "title": "Returns Historical Observations - Given a lat/lon.",
+            "description": "Returns Historical Observations - Given a lat, and lon. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_daily_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_daily_postal_code__postal_code_": {
+            "main": "./lib/actions/get_history_daily_postal_code__postal_code_.js",
+            "title": "Returns Historical Observations - Given a Postal Code",
+            "description": "Returns Historical Observations - Given a Postal Code. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_daily_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_daily_station__station_": {
+            "main": "./lib/actions/get_history_daily_station__station_.js",
+            "title": "Returns Historical Observations - Given a station ID.",
+            "description": "Returns Historical Observations - Given a station ID. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_daily_station__station_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_energy_bbox_lat1__lat1__lon1__lon1__lat2__lat2__lon2__lon2_": {
+            "main": "./lib/actions/get_history_energy_bbox_lat1__lat1__lon1__lon1__lat2__lat2__lon2__lon2_.js",
+            "title": "Returns multiple locations given a bounding box. ",
+            "description": "Returns aggregate energy specific historical weather fields, over a specified time period. Supply a bounding box ex: lat1=40&lon1=-78&lat2=38&lon2=-80. This API will return UP TO 150 stations, aggregated by the specified time period start_date to end_date. ",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_energy_bbox_lat1__lat1__lon1__lon1__lat2__lat2__lon2__lon2_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_energy_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_history_energy_lat__lat__lon__lon_.js",
+            "title": "Returns Energy API response  - Given a single lat/lon. ",
+            "description": "Returns aggregate energy specific historical weather fields, over a specified time period.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_energy_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_hourly_city__city__country__country_": {
+            "main": "./lib/actions/get_history_hourly_city__city__country__country_.js",
+            "title": "Returns Historical Observations - Given City and/or State, Country.",
+            "description": "Returns Historical Observations - Given a city in the format of City,ST or City. The state, and country parameters can be provided to make the search more accurate. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_hourly_city__city__country__country_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_hourly_city_id__city_id_": {
+            "main": "./lib/actions/get_history_hourly_city_id__city_id_.js",
+            "title": "Returns Historical Observations - Given a City ID",
+            "description": "Returns Historical Observations - Given a City ID. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_hourly_city_id__city_id_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_hourly_ip__ip_": {
+            "main": "./lib/actions/get_history_hourly_ip__ip_.js",
+            "title": "Returns Historical Observations - Given IP Address, or auto.",
+            "description": "Returns Historical Observations - Given IP Address, or auto. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_hourly_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_hourly_lat__lat__lon__lon_": {
+            "main": "./lib/actions/get_history_hourly_lat__lat__lon__lon_.js",
+            "title": "Returns Historical Observations - Given a lat/lon.",
+            "description": "Returns Historical Observations - Given a lat, and lon. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_hourly_lat__lat__lon__lon_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_hourly_postal_code__postal_code_": {
+            "main": "./lib/actions/get_history_hourly_postal_code__postal_code_.js",
+            "title": "Returns Historical Observations - Given a Postal Code",
+            "description": "Returns Historical Observations - Given a Postal Code. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_hourly_postal_code__postal_code_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_history_hourly_station__station_": {
+            "main": "./lib/actions/get_history_hourly_station__station_.js",
+            "title": "Returns Historical Observations - Given a station ID.",
+            "description": "Returns Historical Observations - Given a station ID. **(LIMIT 1 day for Free plan. LIMIT 7 days for Developer. LIMIT 30 days for Advanced/Advanced+/Enterprise)**",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_history_hourly_station__station_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_ip_ip__ip_": {
+            "main": "./lib/actions/get_ip_ip__ip_.js",
+            "title": "Returns an Geolocation object.",
+            "description": "Returns a geolocation object. Given an IP address. If no IP supplied, will use request IP address.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_ip_ip__ip_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

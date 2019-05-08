@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "properties": {
+        "postal_code": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "country": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "marine": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "t"
+            ]
+        },
+        "units": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "S",
+                "I"
+            ]
+        },
+        "lang": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "ar",
+                "az",
+                "be",
+                "bg",
+                "bs",
+                "ca",
+                "cs",
+                "de",
+                "fi",
+                "fr",
+                "el",
+                "es",
+                "et",
+                "hr",
+                "hu",
+                "id",
+                "it",
+                "is",
+                "kw",
+                "nb",
+                "nl",
+                "pl",
+                "pt",
+                "ro",
+                "ru",
+                "sk",
+                "sl",
+                "sr",
+                "sv",
+                "tr",
+                "uk",
+                "zh",
+                "zh-tw"
+            ]
+        },
+        "callback": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

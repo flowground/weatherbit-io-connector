@@ -1,0 +1,79 @@
+{
+    "type": "object",
+    "properties": {
+        "ip": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "start_date": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "end_date": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "units": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "S",
+                "I"
+            ]
+        },
+        "lang": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "ar",
+                "az",
+                "be",
+                "bg",
+                "bs",
+                "ca",
+                "cs",
+                "de",
+                "fi",
+                "fr",
+                "el",
+                "es",
+                "et",
+                "hr",
+                "hu",
+                "id",
+                "it",
+                "is",
+                "kw",
+                "nb",
+                "nl",
+                "pl",
+                "pt",
+                "ro",
+                "ru",
+                "sk",
+                "sl",
+                "sr",
+                "sv",
+                "tr",
+                "uk",
+                "zh",
+                "zh-tw"
+            ]
+        },
+        "callback": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

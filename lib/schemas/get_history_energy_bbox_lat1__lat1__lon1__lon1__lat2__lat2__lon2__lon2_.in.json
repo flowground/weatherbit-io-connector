@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "lat1": {
+            "required": true,
+            "type": "number",
+            "format": "double"
+        },
+        "lon1": {
+            "required": true,
+            "type": "number",
+            "format": "double"
+        },
+        "lat2": {
+            "required": true,
+            "type": "number",
+            "format": "double"
+        },
+        "lon2": {
+            "required": true,
+            "type": "number",
+            "format": "double"
+        },
+        "start_date": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "end_date": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "threshold": {
+            "required": false,
+            "type": "number",
+            "format": "double"
+        },
+        "units": {
+            "required": false,
+            "type": "string",
+            "format": "string",
+            "enum": [
+                "S",
+                "I"
+            ]
+        },
+        "callback": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "key": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}
